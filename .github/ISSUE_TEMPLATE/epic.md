@@ -7,13 +7,10 @@ assignees: ''
 
 ---
 
-## User Story
-As a **[Role]**, I would like **[Requirement]** so that **[Reason]**.
+## Epic
+Describe the requirements of the epic.
 
-## Detailed Description
-Provide additional details and context.
-
-## Acceptance Criteria
-- [ ] Given **[Condition]**, then **[Expected Result]**
-- [ ] Given **[Condition]**, then **[Expected Result]**
-- [ ] Given **[Condition]**, then **[Expected Result]**
+## User Stories
+- [ ] story #1
+- [ ] story #4
+- [ ] story #6
