@@ -81,7 +81,7 @@ Each `issue` branch can accumulate commits to address the issue. When ready, it 
 
 ### Creating releases
 
-It is recommended to create periodic releases from the repository, at least at the end of each sprint but can be more frequent. These releases should be working versions of the component being developed. To create such releases, a new tag representing a version number (e.g., 1.0.0) is added to the local `master` branch and pushed to the remote `master` branch. This causes github to create a new release with this tag name.
+It is recommended to create periodic releases from the repository, at least at the end of each sprint but can be more frequent. These releases should be working versions of the component being developed. To create such releases, a new tag representing a version number (e.g., 1.0.0) is added to the local `master` branch and pushed to the remote `master` branch. Then, in the tags pages in Github, such tag can be used to create a new release.
 
 ### Using a CI/CD pipeline
 
@@ -91,4 +91,4 @@ A reposirory can also be setup to build continuously when a commit is pushed to 
 
 The Travis CI script will also be run when a new pull request is created or when more commits are pushed to its linked `issue` branch. Such build gives peer reviewers an idea about the status of building the `master` branch whe the propsoed changes are merged into it. A successful CI build can be a prerequisute for peer reviewers looking at the changes.
 
-When a tag is pushed on the master branch, in the release process, the CI script will additionally deliver and/or deploy the built artifact.
+When a tag is pushed on the master branch, in the release process, the CI script will additionally deliver and/or deploy the built artifact. The script can be also be configured to create a Github release based on the tag.
