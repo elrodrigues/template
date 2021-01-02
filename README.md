@@ -63,15 +63,15 @@ The product owner goes frequently to the Scrum Board project and clicks on the `
 
 The scrum master creates a new milestone and gives it a suitable name (e.g., Sprint1) and a due date. Then, in the Scrum Board, issues from the top of the `To do` column (assuming they have been ordered based on priority) can be assigned to that milestone and to the developers who will work on them.
 
-## Working on issues
+### Working on issues
 
 Developers go to the Scrum Board and filter it for the issues assigned to them in a given milestone. They can pick the ones to work on by moving them to the `In progress` column.
 
-## Reviewing progress
+### Reviewing progress
 
 In the daily standup, scrum master can review progress by going to the Scrum Board and filtering it by the current milestone (sprint). Developers can then reference issues in the various columns when they answer the usual standup questions, e.g., isses they current work on (`In progress`), finsihed (`To do`) or yet to work on (`To do`).
 
-## Working with issue branches
+### Working with issue branches
 
 Before developers work on an issue, they need to checkout and pull the master branch to ensure they have all the latest commits. Then, they should create a new local `issue` branch and name it `issue-[number]` (replacing [nummber] by the issue number). Several `issue` branches can be created concurrently, one for each issue, but it is important to make them independent from each other by checking out the `master` branch before creating each of them. This allows them to be pushed and merged independently from each other.
 
@@ -79,11 +79,11 @@ Each `issue` branch can accumulate commits to address the issue. When ready, it 
 
 > it is recommeded to not push commits to the master branch directly but to always go through a peer review process using an `issue` branch.
 
-## Creating releases
+### Creating releases
 
 It is recommended to create periodic releases from the repository, at least at the end of each sprint but can be more frequent. These releases should be working versions of the component being developed. To create such releases, a new tag representing a version number (e.g., 1.0.0) is added to the local `master` branch and pushed to the remote `master` branch. This causes github to create a new release with this tag name.
 
-## Using a CI/CD pipeline
+### Using a CI/CD pipeline
 
 Every repository needs to have a way to build its artifacts headlessly. It is a good idea to run test cases as part of such build. Instructions on how to build a repository needs to be documented in the repository's README.md file.
 
