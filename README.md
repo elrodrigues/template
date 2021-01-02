@@ -69,7 +69,7 @@ Developers go to the Scrum Board and filter it for the issues assigned to them i
 
 ### Reviewing progress
 
-In the daily standup, scrum master can review progress by going to the Scrum Board and filtering it by the current milestone (sprint). Developers can then reference issues in the various columns when they answer the usual standup questions, e.g., isses they current work on (`In progress`), finsihed (`To do`) or yet to work on (`To do`).
+In the daily standup, scrum master can review progress by going to the Scrum Board and filtering it by the current milestone (sprint). Developers can then reference issues in the various columns when they answer the usual standup questions, e.g., isses they current work on (`In progress`), finsihed (`Done`) or yet to work on (`To do`).
 
 ### Working with issue branches
 
