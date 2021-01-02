@@ -47,7 +47,7 @@ A pull request is a request to merge commits in one branch to another branch. Th
 
 ## Tags
 
-Tags can be used to mark release points in a repository's commit history. Typically, after some code milestone has been achieved, with a set of commits, a release is made by pushing a tag (typically a version number like 1.0.0, 1.0.1, etc.) to the respository. This results in a new release with that tag being created.
+Tags can be used to mark release points in a repository's commit history. Typically, after some code milestone has been achieved, with a set of commits, a release is made by pushing a tag (typically a version number like 1.0.0, 1.0.1, etc.) to the respository. This results in the tag showing up in the repository's tags page.
 
 ## Workflows
 
