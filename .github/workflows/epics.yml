@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Update epic issues
     steps:
-    - name: Epic issues for GitHub
+      - name: Run epics action
         uses: cloudaper/epics-action@v1.0.2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
-          epic-label-name: epic
+          epic-label-name: feature
