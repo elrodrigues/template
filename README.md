@@ -35,7 +35,7 @@ A milestone groups issues that are expected to be delivered at some point in tim
 
 ## Projects
 
-A project is a kanban-style board that can aggregate a set of issues for any purpose. In the scrum context, we can create one project called `Scrum Board` and choose its templaste as `Automated kanban with reviews`. (This will create a set of initial notes that you can delete).
+A project is a kanban-style board that can aggregate a set of issues for any purpose. In the scrum context, we can create one project called `Scrum Board` and choose its template as `Automated kanban with reviews`. (This will create a set of initial notes that you can delete).
 
 ## Branches
 
