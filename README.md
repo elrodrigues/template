@@ -19,11 +19,11 @@ A story is an issue with the label `story`. It may represents a new feature, or 
 
 ### Bug
 
-A bug is an issue with the label `bug`. It represents a problem with the existing code that needs to be fixed. It may have dependencies on other issues.
+A bug is an issue with the label `bug`. It represents a problem with the existing code that needs to be fixed.
 
 ### Question
 
-A question is an issue with the label `question`. It represents a question raised by any one and that may get converted into other types of issues. It may have dependencies on other issues.
+A question is an issue with the label `question`. It represents a question raised by any one and that may get converted into other types of issues.
 
 ## Labels
 
