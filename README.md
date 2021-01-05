@@ -11,11 +11,11 @@ An issue is a unit of tracking work. Issues can be classified into different cla
 
 ### Epic
 
-An epic is an issue with the label `epic`. It represents a large story that can be broken into stories, which can be addressed over multiple sprints. An epic issue references its story issues as a task list in its description. A Github action has been added to automatically check/uncheck the story task items when they get closed/reopened.
+An [epic](https://dev.to/jorenrui/a-look-into-how-i-manage-my-personal-projects-my-git-github-workflow-1e7h#epic-issue) is an issue with the label `epic`. It represents a large story that can be broken into stories, which can be addressed over multiple sprints. An epic issue references its story issues as a task list in its description. A Github action has been added to automatically check/uncheck the story task items when they get closed/reopened.
 
 ### Story
 
-A story is an issue with the label `story`. It may represents a new feature, or an enhancement to an existing feature. A story issue can be broken into sub tasks, which are added as a task list in the description of the story issue. These sub task items can be checked manually by the developer to indicate completion.
+A [story](https://www.atlassian.com/agile/project-management/epics-stories-themes) is an issue with the label `story`. It may represents a new feature, or an enhancement to an existing feature. A story issue can be broken into sub tasks, which are added as a task list in the description of the story issue. These sub task items can be checked manually by the developer to indicate completion.
 
 ### Bug
 
@@ -27,15 +27,15 @@ A question is an issue with the label `question`. It represents a question raise
 
 ## Labels
 
-In addition to the standard labels above, you can add new labels to issues to classify them into different classes like `documentation`, `frontend`, etc, or to add metadata like `duplicate`, `invalid` etc.
+In addition to the [standard labels](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/managing-labels#about-default-labels) above, you can add new labels to issues to classify them into different classes like `documentation`, `frontend`, etc, or to add metadata like `duplicate`, `invalid` etc.
 
 ## Milestones
 
-A milestone groups issues that are expected to be delivered at some point in time. It also allows ordering (prioritizing) theses issues and tracking their progress (percentage of issues completed so far). In the scrum context, a milestone can be used as a sprint. So, you can create your sprints and give them names like Sprint1, Sprint2, etc. and set their due dates respectively.
+A [milestone](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/tracking-the-progress-of-your-work-with-milestones) groups issues that are expected to be delivered at some point in time. It also allows ordering (prioritizing) theses issues and tracking their progress (percentage of issues completed so far). In the scrum context, a milestone can be used as a sprint. So, you can create your sprints and give them names like Sprint1, Sprint2, etc. and set their due dates respectively.
 
 ## Projects
 
-A project is a kanban-style board that can aggregate a set of issues for any purpose. In the scrum context, we can create one project called `Scrum Board` and choose its template as `Automated kanban with reviews`. (This will create a set of initial notes that you can delete).
+A [project](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/tracking-the-progress-of-your-work-with-project-boards) is a kanban-style board that can aggregate a set of issues for any purpose. In the scrum context, we can create one project called `Scrum Board` and choose its template as `Automated kanban with reviews`. (This will create a set of initial notes that you can delete).
 
 ## Branches
 
@@ -43,11 +43,11 @@ The `master` branch is the main branch used for releases. Other branches can be 
 
 ## Pull Requests
 
-A pull request is a request to merge commits from one branch to another branch. This is typically used to merge commits from an `issue` branch into the `master` branch. A pull request is how the process of peer review is carried. Reviewers can comment on the code changes to show approval or request changes (which will need to be addressed by additional commits to the `issue` branch). When a CI pipeline is configured for a repository (see below), it will run on any `issue` brnach that is part of a pull request. When the peer review process has concluded, the new commits can merged into the `master` branch. The recommended merge option is `Squash and merge`, (i.e., squash all commits into a single commit), since it makes the repository's history simple and linear.
+A [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests) is a request to merge commits from one branch to another branch. This is typically used to merge commits from an `issue` branch into the `master` branch. A pull request is how the process of peer review is carried. Reviewers can comment on the code changes to show approval or request changes (which will need to be addressed by additional commits to the `issue` branch). When a CI pipeline is configured for a repository (see below), it will run on any `issue` brnach that is part of a pull request. When the peer review process has concluded, the new commits can merged into the `master` branch. The recommended merge option is `Squash and merge`, (i.e., squash all commits into a single commit), since it makes the repository's history simple and linear.
 
 ## Tags
 
-Tags can be used to mark release points in a repository's commit history. Typically, after some work goal has been achieved, with a set of commits, a tag (typically a version number like 1.0.0, 1.0.1, etc.) is pushed to the respository to mark this point. This results in the tag showing up in the repository's tags page.
+Tags can be used to mark release points in a repository's commit history. Typically, after some work goal has been achieved, with a set of commits, a tag (typically a version number like 1.0.0, 1.0.1, etc.) is [pushed to the respository](https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository) to mark this point. This results in the tag showing up in the repository's [tags page](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/viewing-your-repositorys-releases-and-tags).
 
 ## Workflows
 
@@ -75,19 +75,19 @@ In the daily standup, the `Scrum Master` can review progress by going to the `Sc
 
 Before developers can work on an issue, they should checkout and pull the `master` branch to ensure that they have all the latest commits locally. Then, they should create a new local `issue` branch and name it `issue-[number]` (replacing `[number]` by the issue number). Several `issue` branches can be created concurrently, one for each issue, but it is important to make them independent from each other by checking out the `master` branch before creating each of them. This allows them to be pushed and merged independently from each other (and with the least conflicts).
 
-Each `issue` branch can accumulate commits to address the issue. When ready, it can then be pushed to a corresponding remote branch that can then be used to create a pull request into the `master` branch. The pull request template needs to be filled at this point. Once created, a pull request can be reviewed by a peer reviewer who may request changes. These changes can be made using new commits in the local `issue` branch that can subsequently be pushed to the corresponding remote `issue` branch. When all peer reviews have concluded, the pull request can then be `squash merged` into the `master` branch, and the `issue` branch can be deleted. If the pull request description includes the words `fixes #[number]` (where `[number]` is an issue number), the issue with that number will automatically be closed.
+Each `issue` branch can accumulate commits to address the issue. When ready, it can then be pushed to a corresponding remote branch that can then be used to create a pull request into the `master` branch. The pull request template needs to be filled at this point. Once created, a pull request can be reviewed by a peer reviewer who may request changes. These changes can be made using new commits in the local `issue` branch that can subsequently be pushed to the corresponding remote `issue` branch. When all peer reviews have concluded, the pull request can then be `squash merged` into the `master` branch ([read more here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits)), and the `issue` branch [can be deleted](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-the-automatic-deletion-of-branches). If the pull request description includes the words `fixes #[number]` (where `[number]` is an issue number), the issue with that number will automatically be closed.
 
 > it is recommeded to not push commits to the master branch directly but to always go through a peer review process using an `issue` branch.
 
 ### Creating releases
 
-It is recommended to create periodic releases from a repository, at least at the end of each sprint but can be more frequent. These releases should be working versions of the component(s) being developed in the repository. To create such releases, a new tag representing a version number (e.g., 1.0.0) is added to the local `master` branch then pushed to the remote `master` branch. A new release can then be created in Github using this tag.
+It is recommended to [create periodic releases](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release) from a repository, at least at the end of each sprint but can be more frequent. These releases should be working versions of the component(s) being developed in the repository. To create such releases, a new tag representing a version number (e.g., 1.0.0) is added to the local `master` branch then pushed to the remote `master` branch. A new release can then be created in Github using this tag.
 
 ### Using a CI/CD pipeline
 
 Every repository needs to have a way to build its artifacts headlessly. It is a good idea to run tests as part of such build. Instructions on how to build the components in a repository needs to be documented in the repository's README.md.
 
-A reposirory can also be setup to build continuously whenever a commit is pushed to the `master` branch by setting up a CI script (e.g., Travis CI) in its root folder. Such script will configure the build environment (as a virtual machine) and invoke the build script on the `master` branch. If the script fails for some reason, the committer will be notified to fix it. It is a good practice to add a build [badge](https://shields.io/category/version) to the README.md file to visibly indicate the status of the last CI build (Travis CI provides such badges). 
+A reposirory can also be setup to build continuously whenever a commit is pushed to the `master` branch by setting up a CI script (e.g., [Travis CI](https://www.travis-ci.com/)) in its root folder. Such script will configure the build environment (as a virtual machine) and invoke the build script on the `master` branch. If the script fails for some reason, the committer will be notified to fix it. It is a good practice to add a build [badge](https://shields.io/category/version) to the README.md file to visibly indicate the status of the last CI build (Travis CI provides such badges). 
 
 The CI script will also be run when a new pull request is created or when more commits are pushed to its linked `issue` branch. Such build assures peer reviewers that the new commits when accepted will not break the build. In fact, a successful CI build can be a prerequisute for peer reviewers to look at the changes.
 
